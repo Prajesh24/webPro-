@@ -1,0 +1,265 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #444;
+    background: black;
+    display: flex;
+    height: 100vh;
+}
+
+/* Layout */
+.container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    background: #1c2331;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.sidebar .profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #4caf50;
+    margin-bottom: 1rem;
+}
+
+.sidebar .profile h1 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.sidebar .profile .title {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #ccc;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    animation: fadeInSidebar 2s ease-in;
+}
+
+.sidebar nav ul li {
+    margin: 1rem 0;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #bbb;
+    padding: 0.5rem;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+    color: #4caf50;
+}
+
+main {
+    overflow-y: auto;
+    padding: 2rem;
+}
+
+/* Sections */
+.content-section {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    color: white;
+    animation: fadeIn 2s ease-in;
+}
+
+.about-bg {
+    height: 500px;
+    background: url('MelRibeiro - Overview.gif') no-repeat center/cover;
+}
+
+.skills-bg {
+    height: 400px;
+    background: url('skils.jpeg') no-repeat center/cover;
+}
+
+.projects-bg {
+    height: 400px;
+    background: url('project.jpeg') no-repeat center/cover;
+}
+
+.experience-bg {
+    height: 400px;
+    background: url('experience.jpeg') no-repeat center/cover;
+}
+
+.hobbies-bg {
+    height: 400px;
+    background: url('hobbies.jpeg') no-repeat center/cover;
+}
+
+.content-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    animation: slideInDown 1s ease-in-out;
+}
+
+/* Skills */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.skill {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill span {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.progress {
+    width: 100%;
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress div {
+    height: 10px;
+    background: #4caf50;
+}
+
+/* Project Section */
+.projects {
+    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project {
+    height: 190px;
+    flex: 1 1 calc(33% - 20px);
+    color: black;
+    background-color: white;
+    border: 1px solid #ddd;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.image1{
+    background-image: url('travel.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.image2{
+    background-image: url('automobile.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+.loader {
+        position: relative;
+        left: 120px;
+        top: 50px;
+        height: 60px;
+        width: 60px;
+        border: 5px solid gray;
+        background-color: transparent;
+        border-radius: 50%;
+        border-top: 5px solid black;
+        animation: rotate;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    
+@keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    
+.project a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    color: white;
+    background-color: #4CAF50;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.project a:hover {
+    background-color: #45a049;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInSidebar {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
